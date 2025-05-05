@@ -56,7 +56,11 @@ public class SecurityConfig {
 
     private UrlBasedCorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(List.of("http://localhost:5173", "https://grand-gentleness-production.up.railway.app", "http://localhost:5174"));
+        config.setAllowedOrigins(List.of(
+            "http://localhost:5173", 
+            "https://grand-gentleness-production.up.railway.app", 
+            "http://localhost:5174",
+            "https://serene-contentment-production.up.railway.app" ));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
         config.setAllowedHeaders(List.of("Authorization", "Content-Type"));
         config.setAllowCredentials(true);
